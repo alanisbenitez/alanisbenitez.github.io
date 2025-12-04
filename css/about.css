@@ -117,6 +117,23 @@ body.about .portrait img:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
 }
 
+/* --- Responsive tweaks --- */
+@media (max-width: 980px) {
+  .project {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .thumb {
+    height: 220px;
+  }
+}
+
 /* ---------- BOTTOM NAV (HOME ONLY) ---------- */
 body.about .bottom-nav{
   position:fixed;
