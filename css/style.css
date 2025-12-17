@@ -198,43 +198,47 @@ footer {
 /* ==========================
    TABLET VIEWPORT (768–1024)
    ========================== */
-@media (min-width: 768px) and (max-width: 1024px) {
- /* ===== ABOUT PAGE ===== */
-  body.about {
-    padding-bottom: 120px; /* space for fixed footer */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* define footer height once (adjust if your footer is taller) */
+  body { --footer-h: 84px; }
+
+  /* ABOUT PAGE — tablet: make content/panel reach the footer */
+  body.about{
+    /* creates scroll space so content never hides behind the fixed footer */
+    padding-bottom: calc(var(--footer-h) + env(safe-area-inset-bottom, 0px));
   }
 
   body.about .about-section{
     max-width: 720px;
     margin: 0 auto;
+    padding: 48px 32px;
 
-    /* key part: fill visible viewport */
-    min-height: calc(100dvh - var(--header-h) - 84px);
+    /* THIS is what removes the “big empty bottom” look:
+       it forces the about-section to extend down to the footer */
+    min-height: calc(100svh - var(--header-h) - var(--footer-h) - env(safe-area-inset-bottom, 0px));
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    /* reserve space so the fixed footer doesn’t feel “below” content */
-    padding: 32px 32px calc(84px + env(safe-area-inset-bottom, 0px));
-
+    justify-content: flex-start;
   }
-  
-  body.about .about-photo {
-    max-width: 520px;
+
+  body.about .about-photo{
+    max-width: 560px;
     margin: 0 auto 32px;
   }
 
-  body.about .about-photo img {
-    max-width: 520px;
-    margin: 0 auto 24px;
+  body.about .about-photo img{
+    width: 100%;
+    height: auto;
   }
 
-  body.about .about-text {
+  body.about .about-text{
     font-size: 1rem;
     line-height: 1.65;
     text-align: left;
   }
+}
 
   /* ===== CONTACT PAGE ===== */
   body.contact .contact-hero {
