@@ -204,19 +204,30 @@ footer {
     padding-bottom: 120px; /* space for fixed footer */
   }
 
-  body.about .about-section {
+  body.about .about-section{
     max-width: 720px;
     margin: 0 auto;
-  }
 
+    /* key part: fill visible viewport */
+    min-height: calc(100dvh - var(--header-h) - 84px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* reserve space so the fixed footer doesn’t feel “below” content */
+    padding: 32px 32px calc(84px + env(safe-area-inset-bottom, 0px));
+
+  }
+  
   body.about .about-photo {
     max-width: 520px;
     margin: 0 auto 32px;
   }
 
   body.about .about-photo img {
-    width: 100%;
-    height: auto;
+    max-width: 520px;
+    margin: 0 auto 24px;
   }
 
   body.about .about-text {
