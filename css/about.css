@@ -143,7 +143,7 @@ body.about .bottom-nav a{
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
-  body.about main.wrap{
-    padding-top: 140px; /* pushes everything down on tablet */
+  body.about .wrap{
+    padding-top: 140px; /* move everything down on tablet */
   }
 }
