@@ -129,3 +129,10 @@ body.contact .title {
   color: var(--ink);
   text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* optional glow */
 }
+
+/* iPad / Tablet vertical nudge */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.contact .work-together {
+    transform: translateY(-40px);
+  }
+}
