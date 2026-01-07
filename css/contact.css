@@ -7,9 +7,15 @@ body.contact {
   align-items: center;
 }
 
+body.contact main {
+  min-height: calc(100vh - 96px); /* subtract footer height */
+  display: flex;
+  align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
+}
+
 .work-together {
   text-align: center;
-  margin-top: 80px;
   color: #fcfcfc;
   opacity: 100%
 }
