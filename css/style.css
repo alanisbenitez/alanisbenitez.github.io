@@ -224,8 +224,11 @@ body.home footer {
   body.contact .contact-icons a {
     transform: none;
   }
-}
 
+  .section-title {
+    position: absolute;
+     left: -9999px;
+  }
 /* ==========================
    TABLET VIEWPORT (769–1024)
    ========================== */
@@ -254,9 +257,4 @@ body.home footer {
     line-height: 1.65;
     text-align: left;
   }
-}
-
-.section-title {
-  position: absolute;
-  left: -9999px;
 }
